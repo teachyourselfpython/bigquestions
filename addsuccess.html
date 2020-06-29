@@ -1,0 +1,36 @@
+
+{% extends 'layout.html' %}
+
+
+{% block content %}
+  <center>
+  	<h1>Big Questions</h1>
+  	<p>Welcome to this amazing website!</p>
+  	<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRXT7lDOr0NUEYT_vTJdlkwPVkWkhkCSawk9g&usqp=CAU">
+  	<h3>What is the meaning of life?</h3>
+  	<p>Please put your answers below</p>
+
+  	<a class="btn btn-success" href="#" role="button">Add a comment</a>
+  	<br><br>
+
+
+  <!---add a form here-->
+ <div class="alert alert-success" role="alert">
+  You have submitted your comment, thanks!
+</div>
+
+
+{% endblock %}
+
+
+
+
+
+	<!--
+
+	{% for review in reviews %}
+	<h4>{{review.title}}</h4>
+	<p>{{review.name}}</p>
+	<p>{{review.comment}}</p>
+	{% endfor %}
+-->

@@ -1,0 +1,58 @@
+{% extends 'layout.html' %}
+
+
+{% block content %}
+  <center>
+  	<h1>Big Questions</h1>
+  	<p>Welcome to this amazing website!</p>
+  	<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRXT7lDOr0NUEYT_vTJdlkwPVkWkhkCSawk9g&usqp=CAU">
+  	<h3>What is the meaning of life?</h3>
+  	<p>Please put your answers below</p>
+
+  	<a class="btn btn-success" href="#" role="button">Add a comment</a>
+  	<br><br>
+
+
+  <!---add a form here-->
+  <div class="container">
+  <form action="http://127.0.0.1:5000/add" method="post">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Title</label>
+      <input type="text" class="form-control" id="title" name="title" aria-describedby="emailHelp">
+      
+    </div>
+
+
+    <div class="form-group">
+      <label for="exampleInputPassword1">Name</label>
+      <input type="text" class="form-control" id="name" name="name">
+    </div>
+
+
+
+    <div class="form-group">
+      <label for="exampleInputPassword1">Comments</label>
+      <input type="text" class="form-control" id="comments" name="comments">
+    </div>
+
+
+      <button type="submit" class="btn btn-secondary">Submit</button>
+  </form>
+  </div>
+  <br>
+  <br>
+
+{% endblock %}
+
+
+
+
+
+	<!--
+
+	{% for review in reviews %}
+	<h4>{{review.title}}</h4>
+	<p>{{review.name}}</p>
+	<p>{{review.comment}}</p>
+	{% endfor %}
+-->

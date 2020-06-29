@@ -1,0 +1,70 @@
+{% extends 'layout.html' %}
+
+
+{% block content %}
+<center>
+	<h1>Big Questions</h1>
+	<p>Welcome to this amazing website!</p>
+	<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRXT7lDOr0NUEYT_vTJdlkwPVkWkhkCSawk9g&usqp=CAU">
+	<h3>What is the meaning of life?</h3>
+	<p>The table below shows other responses. Why don't you tell us what you think!?</p>
+
+	<a class="btn btn-success" href="{{url_for('addcomment')}}" role="button">Add a comment</a>
+	<br><br>
+ 
+	
+  <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Title</th>
+      <th scope="col">Name</th>
+      <th scope="col">Comments</th>
+    </tr>
+  </thead>
+  <tbody>
+
+{% for user in user_data %}
+    <tr>
+      <th scope="row">{{user[0]}}</th>
+      <td>{{user[2]}}</td>
+      <td>{{user[1]}}</td>
+      <td>{{user[3]}}</td>
+    </tr>
+  {% endfor %}
+
+  </tbody>
+</table>
+<br>
+<br>
+
+
+
+
+{% endblock %}
+
+	<!--
+
+	{% for review in reviews %}
+	<h4>{{review.title}}</h4>
+	<p>{{review.name}}</p>
+	<p>{{review.comment}}</p>
+	{% endfor %}
+-->
+
+
+
+
+
+
+
+
+<!--
+    <title>BigQuestions</title>
+  </head>
+  <body>
+    <h1>Big Questions - Welcome</h1>
+    <p>We are going to ask some incredibly difficult questions - see if you can answer them</p>
+    <p>What is the meaning of life?</p>
+
+	-->
